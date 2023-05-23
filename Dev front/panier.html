@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon panier</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="assets/css/panier.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/panier.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="catalogue.html">Mon shop</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="catalogue.html">Catalogue</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+              <button class="btn btn-outline-success me-4" type="submit">Recherche</button>
+            </form>
+            
+          </div>
+        </div>
+      </nav>
+    <main>
+        <h1>Panier</h1>
+        <div>
+            <table class="table produit" id="panier" style="width: 70%; align-items: flex-start;">
+                <thead>
+                    <tr>
+                        <th scope="col">Produit</th>
+                        <th scope="col">Prix U.</th>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Prix T.</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+            <script>
+                if (data===null){
+                    const titre = document.createElement('h1');
+                    titre.classList.add('titre');
+                    titre.innerHTML = `<h1>Oops ! Votre panier est vide.</h1>`;
+                    document.body.appendChild(titre);
+                }
+            </script>
+            <table class="table total" id="panier" style="width: 25%; position: sticky; top: 2%;" >
+                
+                    <tr>
+                        <td colspan="2"></td>
+                        <th scope="row" class="text-end">Total Panier TTC</th>
+                        <td id="PrixTotal"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <th scope="row" class="text-end">Montant TVA</th>
+                        <td id="montantTva"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <th scope="row" class="text-end">Frais livraison</th>
+                        <td id="fraislivraison"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <th scope="row" class="text-end">Réduction</th>
+                        <td id="reduction"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <th scope="row" class="text-end">Total à payer</th>
+                        <td id="TotalPayer"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td scope="row" class="text-end">
+                            <a href="catalogue.html" class="btn btn-info">Retournez au catalogue</a>
+                        </td>
+                        <td><a href="formulaire.html" class="btn btn-info">Valider la commande</a></td>
+                        <td><a href="#" class="btn btn-danger" id="btn_suppr_tout">Supprimer le panier</a></td>
+                    </tr>
+                
+            <!--</table>
+            <table class="">
+            -->
+            </table>
+            
+        </div>       
+    </main>      
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payer</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="assets/css/css.css">
+    <script src="assets/js/verifications.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="catalogue.html">Mon shop</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="catalogue.html">Catalogue</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+              <button class="btn btn-outline-success me-4" type="submit">Recherche</button>
+            </form>
+           
+          </div>
+        </div>
+      </nav>
+      <div id="container" >
+        <h2>Payer</h2>
+        <p>Remplissez le formulaire pour valider la commande.</p>
+    <form action="payer.html" id="form">
+        <div>
+            <label for="nom">Votre nom</label>
+            <input type="text" class="form-control validation" id="nom" name="nom" 
+            data-required="true" 
+            data-type="text"
+            data-min="2" data-max="50">
+            <span class="invalid-feedback"></span>
+        </div>
+        <div>
+            <label for="prenom">Votre prénom</label>
+            <input type="text" class="form-control validation" id="prenom" name="prenom" 
+            data-required="true" 
+            data-type="text"
+            data-min="2" data-max="50">
+            <span class="invalid-feedback"></span>
+        </div>
+        <div>
+            <label for="email">Votre mail</label>
+            <input type="email" class="form-control validation" id="email" name="email" 
+            data-required="true" 
+            data-type="email"
+            data-min="2" data-max="50">
+            <span class="invalid-feedback"></span>
+        </div>
+        <div>
+            <label for="adresse">Votre adresse</label>
+            <input type="text" class="form-control validation" id="adresse" name="adresse" 
+            data-required="true" 
+            data-type="text"
+            data-min="7" data-max="50">
+            <span class="invalid-feedback"></span>
+        </div>
+        <div>
+            <label for="ville">Votre ville</label>
+            <input type="text" class="form-control validation" id="ville" name="ville" 
+            data-required="true" 
+            data-type="text"
+            data-min="2" data-max="50">
+            <span class="invalid-feedback"></span>
+        </div>
+        <div>
+            <label for="code_postal">Votre code postal</label>
+            <input type="number" class="form-control validation" id="code_postal" name="code_postal" 
+            data-required="true" 
+            data-type="number"
+            data-id="numero"
+            data-min="5" data-max="5">
+            <span class="invalid-feedback"></span>
+        </div>
+        <div>
+            <label for="tel">Votre numéro de téléphone</label>
+            <input type="number" class="form-control validation" id="tel" name="tel" 
+            data-required="true" 
+            data-type="number"
+            data-id="numero"
+            data-min="6" data-max="6">
+            <span class="invalid-feedback"></span>
+        </div>
+        <div>
+            <input class="btn btn-primary" type="submit" id="btn-payer" value="Payer" href="payer.html">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
